@@ -25,3 +25,5 @@ setup() {
     setup_homebrew_packages
     setup_python_packages
 }
+
+setup
