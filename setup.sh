@@ -19,3 +19,9 @@ setup_python_packages() {
     sudo pip install -U pip
     sudo pip install boto
 }
+
+setup() {
+    setup_homebrew
+    setup_homebrew_packages
+    setup_python_packages
+}
