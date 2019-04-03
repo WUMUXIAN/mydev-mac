@@ -92,3 +92,8 @@ export GOBIN=$HOME/GoSpace/bin
 export PATH=$PATH:$HOME/GoSpace/bin
 
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+
+#### install java.
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt update && sudo apt install oracle-java8-installer -y
+sudo apt install oracle-java8-set-default -y
