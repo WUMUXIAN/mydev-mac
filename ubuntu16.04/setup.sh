@@ -76,11 +76,19 @@ sudo pkill -SIGHUP dockerd
 # Test nvidia-smi with the latest official CUDA image
 sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 
-
+## install golang and dep
 wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
 echo "export GOPATH=$HOME/GoSpace" >> ~/.zshrc
-echo "export GOBIN=$HOME/Gospace/bin" >> ~/.zshrc
-echo "export PATH=$PATH:$HOME/Gospace/bin" >> ~/.zshrc
+echo "export GOBIN=$HOME/GoSpace/bin" >> ~/.zshrc
+echo "export PATH=$PATH:$HOME/GoSpace/bin" >> ~/.zshrc
 rm -rf go1.12.1.linux-amd64.tar.gz
+
+# do it here.
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/GoSpace
+export GOBIN=$HOME/GoSpace/bin
+export PATH=$PATH:$HOME/GoSpace/bin
+
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
