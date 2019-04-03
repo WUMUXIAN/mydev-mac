@@ -57,7 +57,7 @@ sudo add-apt-repository \
 sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 sudo usermod -aG docker $USER
 
-If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
+## If you have nvidia-docker 1.0 installed: we need to remove it and all existing GPU containers
 sudo docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
 sudo apt-get purge -y nvidia-docker
 
@@ -76,7 +76,11 @@ sudo pkill -SIGHUP dockerd
 # Test nvidia-smi with the latest official CUDA image
 sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 
-## install golang and dep
+##### Install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+##### install golang and dep
 wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
@@ -93,12 +97,12 @@ export PATH=$PATH:$HOME/GoSpace/bin
 
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
-#### install java.
+##### install java.
 sudo add-apt-repository ppa:webupd8team/java --yes
 sudo apt update && sudo apt install oracle-java8-installer -y
 sudo apt install oracle-java8-set-default -y
 
-#### install ansible
+##### install ansible
 sudo apt-get update
 sudo apt-get install software-properties-common -y
 sudo apt-add-repository --yes --update ppa:ansible/ansible
