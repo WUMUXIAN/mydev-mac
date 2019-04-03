@@ -9,3 +9,7 @@ This repo provide scripts for installing the commonly used softwares & tools for
 - homebrew
 - python, wget, go, cmake, youtube-dl, jenv, ansible
 - pip, boto
+
+
+## Common
+If you installed oh-my-zsh and requires powerline fonts, you can install the font file given in this repo and select it to use in your terminal.
