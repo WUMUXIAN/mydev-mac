@@ -94,6 +94,12 @@ export PATH=$PATH:$HOME/GoSpace/bin
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 #### install java.
-sudo add-apt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:webupd8team/java --yes
 sudo apt update && sudo apt install oracle-java8-installer -y
 sudo apt install oracle-java8-set-default -y
+
+#### install ansible
+sudo apt-get update
+sudo apt-get install software-properties-common -y
+sudo apt-add-repository --yes --update ppa:ansible/ansible
+sudo apt-get install ansible -y
