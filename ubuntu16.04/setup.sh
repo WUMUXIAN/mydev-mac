@@ -82,5 +82,5 @@ sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
 echo "export GOPATH=$HOME/GoSpace" >> ~/.zshrc
 echo "export GOBIN=$HOME/Gospace/bin" >> ~/.zshrc
-echo "export PATH=$PATH:$GOBIN" >> ~/.zshrc
+echo "export PATH=$PATH:$HOME/Gospace/bin" >> ~/.zshrc
 rm -rf go1.12.1.linux-amd64.tar.gz
