@@ -107,3 +107,8 @@ sudo apt-get update
 sudo apt-get install software-properties-common -y
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible -y
+
+##### Install mysql work bench
+wget https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
+sudo dpkg -i mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
+sudo apt install -f -y
