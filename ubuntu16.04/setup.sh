@@ -5,7 +5,7 @@ sudo apt-get update -y &&
 sudo apt-get install -y git \
   terminator \
   zsh \
-   curl \
+  curl \
   htop \
   telnet
 
