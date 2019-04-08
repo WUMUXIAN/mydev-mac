@@ -3,9 +3,9 @@
 ##### Install necessary softwares via apt-get
 sudo apt-get update -y &&
 sudo apt-get install -y git \
-	terminator \
+  terminator \
   zsh \
-	curl \
+   curl \
   htop \
   telnet
 
