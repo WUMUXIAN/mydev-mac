@@ -80,7 +80,7 @@ sudo docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
-##### install golang and dep
+##### install golang and dep and beego cli.
 wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
 mkdir -p $HOME/GoSpace/src $HOME/GoSpace/bin $HOME/GoSpace/pkg
@@ -98,6 +98,7 @@ export GOBIN=$HOME/GoSpace/bin
 export PATH=$PATH:$HOME/GoSpace/bin
 
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+go get github.com/beego/bee
 
 ##### install java.
 sudo add-apt-repository ppa:webupd8team/java --yes
