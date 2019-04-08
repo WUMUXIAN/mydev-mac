@@ -10,7 +10,7 @@ sudo apt-get install -y git \
   telnet
 
 ##### Install oh-my-zsh
-sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 
 ##### Install atom
@@ -83,6 +83,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 ##### install golang and dep
 wget https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
 sudo tar -C /usr/local -xzf go1.12.1.linux-amd64.tar.gz
+mkdir -p $HOME/GoSpace/src $HOME/GoSpace/bin $HOME/GoSpace/pkg
+sudo chown -R $USER:$USER $HOME/GoSpace
 echo "export PATH=$PATH:/usr/local/go/bin" >> ~/.zshrc
 echo "export GOPATH=$HOME/GoSpace" >> ~/.zshrc
 echo "export GOBIN=$HOME/GoSpace/bin" >> ~/.zshrc
@@ -112,3 +114,4 @@ sudo apt-get install ansible -y
 wget https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
 sudo dpkg -i mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
 sudo apt install -f -y
+rm -rf mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
