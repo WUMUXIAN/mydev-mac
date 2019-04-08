@@ -12,6 +12,6 @@ sudo update-initramfs -u
 
 
 ### The following command is used.
-sudo sh cuda_10.1.105_418.39_linux.run --silent --toolkit --toolkitpath=/usr/local/cuda-10.0
+sudo sh cuda_10.1.105_418.39_linux.run --silent --driver --toolkit --toolkitpath=/usr/local/cuda-10.0
 sudo sh cuda_8.0.61_375.26_linux.run --silent --toolkit --toolkitpath=/usr/local/cuda-8.0
 sudo sh cuda_8.0.61.2_linux.run
