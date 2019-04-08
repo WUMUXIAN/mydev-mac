@@ -109,6 +109,8 @@ sudo apt-get update
 sudo apt-get install software-properties-common -y
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible -y
+sudo apt-get install python-pip -y
+pip install --upgrade pip && pip install docker-py
 
 ##### Install mysql work bench
 wget https://cdn.mysql.com//Downloads/MySQLGUITools/mysql-workbench-community-6.3.10-1ubuntu16.04-amd64.deb
